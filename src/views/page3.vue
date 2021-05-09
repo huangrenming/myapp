@@ -21,7 +21,10 @@
             <div class="box"></div>
           </div>
           <div class="inner-dw">
-            <div ref="zxtu" class="box"></div>
+            <div
+              ref="zxtu"
+              class="box"
+            ></div>
           </div>
           <div class="inner-dw">
             <div class="box"></div>
@@ -29,7 +32,34 @@
         </div>
         <div class="r">
           <div class="inner-up">
-            <div class="box"></div>
+            <div class="box">
+              tabs
+              <v-tabs
+                style="width:200px"
+                :headerStyle="{
+                  top: '-20px'
+                }"
+              >
+                <v-tabs-pane
+                  label="tab1"
+                  name="tab1"
+                >
+                  tab1
+                </v-tabs-pane>
+                <v-tabs-pane
+                  label="tab2"
+                  name="tab2"
+                >
+                  tab2
+                </v-tabs-pane>
+                <v-tabs-pane
+                  label="tab3"
+                  name="tab3"
+                >
+                  tab3
+                </v-tabs-pane>
+              </v-tabs>
+            </div>
           </div>
           <div class="inner-dw">
             <div class="box"></div>
@@ -47,10 +77,12 @@
 <script>
 import * as echarts from 'echarts'
 import FullScreen from '@/components/Fullscreen.vue'
-import VScroll from '@/components/jsxComponent.vue'
+import VScroll from '@/components/VScroll.vue'
+import VTabs from '@/components/VTabs.vue'
+import VTabsPane from '@/components/VTabsPane.vue'
 export default {
   name: 'Page2',
-  components: { FullScreen, VScroll },
+  components: { FullScreen, VScroll, VTabs, VTabsPane },
   props: {},
   data() {
     return {
