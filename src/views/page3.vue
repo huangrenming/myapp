@@ -1,15 +1,18 @@
 <template>
-  <fullscreen>
+  <full-screen :DeBs="DeBs">
     <div class="page2">
       <div class="top"></div>
       <div class="content">
         <div class="l">
           <div class="inner-up">
-            <div class="box"></div>
+            <div class="box">
+              <div class="text">实时大屏展示</div>
+            </div>
           </div>
           <div class="inner-mm">
             <div class="box">
-              <v-scroll />
+              oo
+              <v-scroll :id="3">hello</v-scroll>
             </div>
           </div>
         </div>
@@ -29,9 +32,7 @@
             <div class="box"></div>
           </div>
           <div class="inner-dw">
-            <div class="box">
-              <v-scroll />
-            </div>
+            <div class="box"></div>
           </div>
           <div class="inner-dw">
             <div class="box"></div>
@@ -40,19 +41,21 @@
       </div>
       <div class="bottom"></div>
     </div>
-  </fullscreen>
+  </full-screen>
 </template>
 
 <script>
 import * as echarts from 'echarts'
-import Fullscreen from '@/components/Fullscreen.vue'
-import VScroll from '@/components/VScroll.vue'
+import FullScreen from '@/components/Fullscreen.vue'
+import VScroll from '@/components/jsxComponent.vue'
 export default {
   name: 'Page2',
-  components: { Fullscreen, VScroll },
+  components: { FullScreen, VScroll },
   props: {},
   data() {
-    return {}
+    return {
+      DeBs: '000'
+    }
   },
   mounted() {
     this.initEchart()
@@ -121,6 +124,28 @@ export default {
   }
 }
 </script>
+<style>
+@media (min-width: 1280px) {
+  /* hi-res laptops and desktops */
+  html {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* big landscape tablets, laptops, and desktops */
+  html {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 1920px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  html {
+    font-size: 100px;
+  }
+}
+</style>
 <style lang="scss" scoped>
 .page2 {
   position: relative;
@@ -189,6 +214,14 @@ export default {
 
   padding: 10px;
   box-sizing: border-box;
+
+  .text {
+    width: 3.6rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.5rem;
+    background: #f56969;
+  }
 }
 </style>
 

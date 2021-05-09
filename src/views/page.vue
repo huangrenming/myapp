@@ -1,15 +1,15 @@
 <template>
   <div class="page">
-    <Scroll />
+    <v-scroll />
   </div>
 </template>
 
 <script>
-import Scroll from '@/components/Scroll.vue'
+import VScroll from '@/components/VScroll.vue'
 export default {
-  name: 'page',
+  name: 'Page',
   components: {
-    Scroll
+    VScroll
   },
   props: {},
   data() {

@@ -17,20 +17,20 @@ export default {
   components: {
     vueSeamlessScroll
   },
-  created() {
-    for (let i = 0; i <= 50; i++) {
-      this.listData.push({
-        title: `无缝滚动第一行无缝滚动第 ${i} 行`,
-        date: `2017-12-16- ${i}`
-      })
-    }
-  },
   data() {
     return {
       listData: [],
       classOption: {
         step: 0.5
       }
+    }
+  },
+  created() {
+    for (let i = 0; i <= 50; i++) {
+      this.listData.push({
+        title: `无缝滚动第一行无缝滚动第 ${i} 行`,
+        date: `2017-12-16- ${i}`
+      })
     }
   }
 }
@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .warp {
   width: 100%;
-  height: 100%;
+  height: 250px;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;

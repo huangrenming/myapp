@@ -1,7 +1,8 @@
 const routes = [
   { path: '/', component: () => import('@/views/index.vue') },
   { path: '/b', component: () => import('@/views/page.vue') },
-  { path: '/c', component: () => import('@/views/page2.vue') }
+  { path: '/c', component: () => import('@/views/page2.vue') },
+  { path: '/d', component: () => import('@/views/page3.vue') }
 ]
 
 // eslint-disable-next-line no-undef

@@ -1,14 +1,14 @@
 <template>
   <div>
     <img alt="Vue logo" src="@/assets/logo.png" />
-    <HelloWorld />
+    <hello-world />
   </div>
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 export default {
-  name: 'index',
+  name: 'Index',
   components: {
     HelloWorld
   },
