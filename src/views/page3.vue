@@ -62,7 +62,22 @@
             </div>
           </div>
           <div class="inner-dw">
-            <div class="box"></div>
+            <div class="box">
+              <v-table>
+                <v-table-column
+                  label="date"
+                  prop="date"
+                ></v-table-column>
+                <v-table-column
+                  label="name"
+                  prop="name"
+                ></v-table-column>
+                <v-table-column
+                  label="address"
+                  prop="address"
+                ></v-table-column>
+              </v-table>
+            </div>
           </div>
           <div class="inner-dw">
             <div class="box"></div>
@@ -80,9 +95,14 @@ import FullScreen from '@/components/Fullscreen.vue'
 import VScroll from '@/components/VScroll.vue'
 import VTabs from '@/components/VTabs.vue'
 import VTabsPane from '@/components/VTabsPane.vue'
+import VTable from '@/components/table/VTable.vue'
+import VTableColumn from '@/components/table/VTableColumn.vue'
+import test from './test'
+console.log(test)
+
 export default {
   name: 'Page2',
-  components: { FullScreen, VScroll, VTabs, VTabsPane },
+  components: { FullScreen, VScroll, VTabs, VTabsPane, VTable, VTableColumn },
   props: {},
   data() {
     return {
