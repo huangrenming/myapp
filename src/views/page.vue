@@ -1,12 +1,17 @@
 <template>
-  <a-table
+  <!-- <a-table
     :columns="columns"
     :data-source="data"
     :row-selection="rowSelection"
     :expanded-row-keys.sync="expandedRowKeys"
-  />
+  /> -->
+  <div>
+    <my-table></my-table>
+  </div>
+
 </template>
 <script>
+import MyTable from '../components/mytable'
 const columns = [
   {
     title: 'Name',
@@ -109,6 +114,9 @@ const rowSelection = {
 }
 
 export default {
+  components: {
+    MyTable
+  },
   data() {
     return {
       data,
